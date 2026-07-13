@@ -1,0 +1,40 @@
+
+
+aside {
+  transition: transform 0.3s ease-in-out;
+  
+  z-index: 1000;
+}
+
+@media (max-width: 1024px) {
+  aside {
+     position: fixed;
+    top: 101px;
+    left: 0;
+    width: 270px;
+    height: fit-content;
+    z-index: 1000;
+    transform: translateX(-270px);
+    transition: transform 0.3s ease;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+    padding-bottom: 30px;
+  }
+
+  aside.open
+  {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 480px) {
+  aside {
+    width: 85%;
+    max-width: 300px;
+    transform: translateX(-100%);
+    height: fit-content;
+    padding-bottom: 30px;
+  }
+
+  aside.open {
+    transform: translateX(0);
+  }
+}

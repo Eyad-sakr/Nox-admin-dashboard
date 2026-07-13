@@ -1,0 +1,97 @@
+
+
+body, * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+ul {
+    list-style-type: none;
+}
+/* ── Container ── */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+}
+#root {
+   display: grid;
+  min-height: 100vh;
+    grid-template-columns: repeat(13, 135px);
+    /* grid-template-rows: repeat(8, 100px); */
+    
+}
+/* Extra small (< 576px) */
+@media (max-width: 575px) {
+  .container {
+     max-width: 100%;
+  }
+}
+
+/* Small (≥ 576px) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Medium (≥ 768px) */
+@media (min-width: 768px) {
+  .container {
+     max-width: 720px;
+  }
+}
+
+/* Large (≥ 992px) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* X-Large (≥ 1200px) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* XX-Large (≥ 1400px) */
+@media (min-width: 1400px) {
+  .container {
+   max-width: 1320px;
+  }
+}
+
+ 
+.content {
+  position: relative;
+  z-index: 1;
+}
+ 
+
+
+
+
+
+
+
+

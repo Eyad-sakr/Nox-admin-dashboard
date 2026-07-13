@@ -1,0 +1,220 @@
+header {
+    
+    background-color: #4f1724;
+    grid-area: 1 / 3 / 3 / 14;
+    height: 101px;
+
+    padding: var( --space-2);
+    border-bottom: 2px solid #541c28;
+     position: fixed;
+  top: 0;
+  right: 0;
+  left: 270px;
+  z-index: 100;
+}
+
+header .Header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    
+}
+
+header .Header-inner .Logo {
+    text-align: center;
+   margin: 33px;
+    display: flex;
+    align-items: center;
+}
+header .Header-inner .Logo h4:first-child {
+    color: #cca1a5;
+    margin-right: 12px;
+    font-weight: normal;
+}
+header .Header-inner .Logo h5 {
+    color: #cca1a5;
+    font-weight: normal;
+    margin-right: 12px;
+}
+header .Header-inner .Logo h4:last-child {
+    color: #f8f4f4;
+    
+    font-weight: 600;
+}
+header .Header-inner .NAV {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 45px;
+}
+header .Header-inner .NAV svg {
+    font-size: 25px;
+color: #e8e0d5;
+}
+.Search-Bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(217, 167, 96, 0.2); /* الـ gold subtle */    
+    min-width: 350px;
+    /* position: absolute;
+    left: 52%;
+    top: 29px; */
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+
+.Search-Bar:focus-within {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(217, 167, 96, 0.4);
+    box-shadow: 0 0 20px rgba(217, 167, 96, 0.1);
+}
+
+.Search-Bar svg {
+    color: rgba(255, 255, 255, 0.5);
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.Search-Bar input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #cca1a5;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.Search-Bar input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.Search-Bar .keyboard-hint {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+.user-avatar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+ 
+.user-avatar:hover {
+  background: rgba(217, 167, 96, 0.08);
+}
+ 
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #68202f, #68202f);
+  border: 1px solid rgba(217, 167, 96, 0.3);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+ 
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+ 
+.user-info h4 {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+ 
+.user-info p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+/*res*/
+@media (max-width:1024px) {
+     .NAV  .iconM ,
+      .NAV  .iconf{
+        display: none;
+    }
+    .user-avatar {
+        padding: 0 0;
+    }
+    header {
+      left: 0;
+    }
+    header .Header-inner .NAV {
+    
+    gap: 22px;
+}
+    
+}
+@media (max-width: 767px) {
+header {
+    left: 0;
+  }
+  .user-avatar {
+        padding: 0 0;
+        display: nonex  ;
+    }
+    .Search-Bar {
+     gap: 8px;
+        min-width: 250px;
+        position: relative;
+        left: -35px;
+        
+    }
+    header .Header-inner .Logo h4:last-child {
+      display: none;
+    }
+    header .Header-inner .Logo h5 {
+      display: none;
+    }
+    header .Header-inner .Logo h4:first-child {
+      position: relative;
+    left: -12px;
+    }
+}
+
+/* الزرار يظهر بس على التابلت والموبايل */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: inherit;
+  padding: 4px 8px;
+}
+
+@media (max-width: 1024px) {
+  .hamburger-btn {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+  }
+}
+
+
+
+

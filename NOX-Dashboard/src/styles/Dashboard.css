@@ -1,0 +1,708 @@
+.Dashboard  {
+   display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    
+}
+.Dashboard-container {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+}
+.Dashboard .Main-Heading {
+    padding: var(--space-7) 0 ;
+}
+.Dashboard .Main-Heading h2 {
+color: white;
+font-size: 35px;
+font-weight: 700;
+}
+.Dashboard .Main-Heading span {
+    color: #cca1a5;
+    font-size: 15px;
+    letter-spacing: 1.6px;
+}
+.Dashboard .Cards-Container{
+justify-content: flex-start;
+    color: white;
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    
+     
+}
+.Dashboard .Cards-Container .card {
+    background-color: #4f1724;
+    border-radius: 19px;
+    width: 300px;
+    height: 190px;
+    padding: var(--space-5);
+
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   transition: all ease 0.5s;
+   gap: 0;
+   justify-content: center;
+
+}
+.Dashboard .Cards-Container .card:hover {
+    transform: translatey(-2%);
+     box-shadow:
+    0 0 0 1px rgba(255, 120, 150, 0.15),
+    0 0 20px rgba(180, 40, 80, 0.25),
+    0 0 40px rgba(180, 40, 80, 0.2),
+    0 0 80px rgba(180, 40, 80, 0.1);
+
+
+}
+.Dashboard .Cards-Container .card .circle {
+     width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #68202f, #68202f);
+  border: 1px solid rgba(217, 167, 96, 0.3);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.Dashboard .Cards-Container .card span {
+   text-align: center;
+    grid-column: 2;
+    color: #59d1a4;
+    background-color: #372928;
+    width: 75px;
+    height: 28px;
+    border-radius: 13px;
+    line-height: 1.7;
+    
+}
+.Dashboard .Cards-Container .card h1 {
+    
+    grid-column: 1;
+}
+.Dashboard .Cards-Container .card h3 {
+    color: #cca1a5;
+    font-size: 16px;
+    margin-top: var(--space-6);
+    grid-column: 1;
+    letter-spacing: 1.5px;
+}
+.RevnueProfitChart {
+   width: 880px;
+    height: 431px;
+    background-color: #4f1724;
+    margin-top: var(--space-6);
+    border-radius: 18px;
+    margin-bottom: 30px;
+    transition: all ease 0.5s;
+}
+.RevnueProfitChart:hover {
+     transform: translatey(-2%);
+     box-shadow:
+    0 0 0 1px rgba(255, 120, 150, 0.15),
+    0 0 20px rgba(180, 40, 80, 0.25),
+    0 0 40px rgba(180, 40, 80, 0.2),
+    0 0 80px rgba(180, 40, 80, 0.1);
+}
+.RevnueProfitChart .main-Heading {
+    line-height: 1.5;
+    padding-left: 42px;
+    padding-top: var(--space-5);
+}
+.RevnueProfitChart .main-Heading {
+    display: flex;
+    justify-content: space-between;
+}
+.RevnueProfitChart .main-Heading .Title h1 {
+    font-size: 24px;
+    color: white;
+
+}
+.RevnueProfitChart .main-Heading .Title h4 {
+    color: #cca1a5;
+}
+.RevnueProfitChart .main-Heading .RevnueLegnd {
+    display: flex;
+    padding-right: 30px;
+}
+.RevnueProfitChart .main-Heading .RevnueLegnd .legend-item1 {
+  text-align: right;
+    background-color: #3c181f;
+    width: 99px;
+    height: 25px;
+    border-radius: 30px;
+    padding-right: 15px;
+   
+    color: white;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    margin-right: 16px;
+}
+.RevnueProfitChart .main-Heading .RevnueLegnd .legend-item1 .dot-revenue {
+  top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #8b2635;
+    position: relative;
+    left: -7px;
+    
+}
+.RevnueProfitChart .main-Heading .RevnueLegnd .legend-item2 {
+  display: inline-block;
+    text-align: right;
+    background-color: #3c181f;
+    width: 81px;
+    height: 25px;
+    border-radius: 30px;
+    padding-right: 15px;
+    color: white;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    
+}
+.RevnueProfitChart .main-Heading .RevnueLegnd .legend-item2 .dot-profit {
+  top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #d8a7b1;
+    position: relative;
+    left: -7px;
+    
+}
+.custom-tooltip {
+  background: #4f1724;
+  border: 1px solid #8b2635;
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.custom-tooltip .title {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.custom-tooltip .profit {
+  color: #d8a7b1;
+}
+
+.custom-tooltip .revenue {
+  color: #8b2635;
+}
+
+.Dashboard .Charts-Row {
+    display: flex;
+    gap: 40px;
+}
+.Dashboard .Charts-Row .CategoryChart {
+   width: 414px;
+    height: 440px;
+    margin-top: var(--space-5);
+    border-radius: 35px;
+    background-color: #4f1724;
+    padding: var(--space-5);
+    transition: all ease 0.5s;
+    
+}
+.Dashboard .Charts-Row .CategoryChart:hover {
+     transform: translatey(-2%);
+     box-shadow:
+    0 0 0 1px rgba(255, 120, 150, 0.15),
+    0 0 20px rgba(180, 40, 80, 0.25),
+    0 0 40px rgba(180, 40, 80, 0.2),
+    0 0 80px rgba(180, 40, 80, 0.1);
+}
+
+.Dashboard .Charts-Row .CategoryChart .Category-Heding {
+    padding: 10px;
+    color:white ;
+    
+}
+.Dashboard .Charts-Row .CategoryChart h1 {
+    font-size: 20px;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+}
+.Dashboard .Charts-Row .CategoryChart h4 {
+    font-size: 12px ;
+    color: #cca1a5;
+        letter-spacing: 1px;
+
+}
+.Dashboard .Charts-Row .CategoryChart svg {
+  position: relative;
+    left: 38px;
+    width: 281px !important;
+    height: 326px !important;
+    top: -45px;
+
+}
+.Dashboard .Charts-Row .CategoryChart .Catgory-Legend{
+    position: relative;
+    top: -128px;
+    bottom: 2px;
+}
+.Dashboard .Charts-Row .CategoryChart .Catgory-Legend p {
+    display: flex;
+    justify-content: space-between;
+    color: #cca1a5;
+    margin-bottom: 3px;
+}
+.Dashboard .Charts-Row .CategoryChart .Catgory-Legend p span:last-child {
+    color: white;
+}
+.Dashboard .Charts-Row .CategoryChart .Catgory-Legend p span:first-child {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.Dashboard .Charts-Row .CategoryChart .Catgory-Legend p .Sh::before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #f1e194;
+    display: inline-block;
+    margin-right: 8px;
+}
+.Dashboard .Charts-Row .CategoryChart .Catgory-Legend p .Tr::before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #f1e194;
+    display: inline-block;
+        margin-right: 8px;
+
+}
+.Dashboard .Charts-Row .CategoryChart .Catgory-Legend p .Ac::before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #e8b4c4;
+    display: inline-block;
+        margin-right: 8px;
+
+    
+}
+.Dashboard .Charts-Row .CategoryChart .Catgory-Legend p .Ac::before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #d17a8e;
+    display: inline-block;
+        margin-right: 8px;
+
+}
+.Dashboard .Charts-Row .CategoryChart .Catgory-Legend p .Ou::before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #a67a8a;
+    display: inline-block;
+        margin-right: 8px;
+
+}
+.Dashboard .ordersrow {
+    display: flex;
+    gap: 40px;
+}
+.Dashboard .ordersrow .OrdersTable {
+    width: 880px;
+    height: 431px;
+    background-color: #4f1724;
+      margin-bottom: 30px;
+       border-radius: 18px;
+       padding:20px;
+
+       transition: all ease 0.5s;
+}
+.Dashboard .ordersrow .OrdersTable:hover {
+     transform: translatey(-2%);
+     box-shadow:
+    0 0 0 1px rgba(255, 120, 150, 0.15),
+    0 0 20px rgba(180, 40, 80, 0.25),
+    0 0 40px rgba(180, 40, 80, 0.2),
+    0 0 80px rgba(180, 40, 80, 0.1);
+}
+.Dashboard .ordersrow .OrdersTable .Orders-Heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.Dashboard .ordersrow .OrdersTable .Orders-Heading h1 {
+    font-size: 20px;
+    color: white;
+}
+.Dashboard .ordersrow .OrdersTable .Orders-Heading h4 {
+    font-size: 12px;
+    margin-top: 2px;
+    color: #cca1a5;
+}
+.Dashboard .ordersrow .OrdersTable .Orders-Heading .buuton button {
+background-color: transparent;
+border: none;
+font-size:12px;
+color:#cca1a5;
+letter-spacing: 1px;
+font-weight: normal;
+cursor: pointer;
+
+
+}
+.Dashboard .ordersrow .OrdersTable .tablecont table {
+    width: 842px;
+    height: 340px;
+      border-collapse: collapse;
+}
+
+
+.Dashboard .ordersrow .OrdersTable .tablecont table thead  {
+    
+    text-transform: uppercase;
+}
+.Dashboard .ordersrow .OrdersTable .tablecont table thead tr th {
+    text-align: left;
+    color:#cca1a5;
+    padding: 12px 8px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.Dashboard .ordersrow .OrdersTable .tablecont table tbody tr td {
+    font-size: 16px;
+    border-top: 1px solid #cca1a52b !important;
+    padding:16px 8px
+}
+.Dashboard .ordersrow .OrdersTable .tablecont table tbody tr td:nth-child(1)
+{
+    color: white;
+}
+.Dashboard .ordersrow .OrdersTable .tablecont table tbody tr td:nth-child(2) {
+    color: white;
+}
+.Dashboard .ordersrow .OrdersTable .tablecont table tbody tr td:nth-child(3) {
+    color:#cca1a5
+}
+.Dashboard .ordersrow .OrdersTable .tablecont table tbody tr td:nth-child(4) {
+    color: white;
+} 
+.Dashboard .ordersrow .OrdersTable tbody tr .status {
+    padding: 4px 12px !important;
+  border-radius: 12px;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 15px;
+    overflow: visible;
+
+}
+
+.status.completed {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+}
+
+.status.processing {
+  background-color: rgba(217, 119, 6, 0.1);
+  color: #d97706;
+}
+
+.status.shipped {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.status.pending {
+  background-color: rgba(168, 85, 247, 0.1);
+  color: #a855f7;
+}
+ .activity-feed {
+    background-color: #4f1724;
+    width: 414px;
+    height: 431px;
+    border-radius: 35px;
+    padding: var(--space-5);
+    transition: all ease 0.5s;
+    
+}
+.activity-feed:hover{
+    transform: translatey(-2%);
+    box-shadow:
+    0 0 0 1px rgba(255, 120, 150, 0.15),
+    0 0 20px rgba(180, 40, 80, 0.25),
+    0 0 40px rgba(180, 40, 80, 0.2),
+    0 0 80px rgba(180, 40, 80, 0.1);
+}
+ .activity-feed .activity-Heading h1 {
+    color: white;
+}
+.activity-feed .activity-Heading h4
+ {
+    color: #cca1a5;
+    margin-bottom: 20px;
+}
+ .activity-feed .activity-item 
+{
+    display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+
+}
+.activity-item:hover {
+  background-color: rgba(241, 225, 148, 0.08);
+}
+
+ .activity-feed .activity-item .content h4
+{
+    color: white;
+    font-size: 16px;
+}
+ .activity-feed .activity-item .content p {
+    color: #cca1a5;
+    font-size: 12px;
+}
+.activity-item .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+  background-color: #F1E194;
+}
+
+.activity-item.activity-order .dot {
+  background-color: #22c55e;
+}
+
+.activity-item.activity-inventory .dot {
+  background-color: #f59e0b;
+}
+
+.activity-item.activity-review .dot {
+  background-color: #3b82f6;
+}
+
+.activity-item.activity-campaign .dot {
+  background-color: #a855f7;
+}
+
+.activity-item.activity-refund .dot {
+  background-color: #ef4444;
+}
+.ChannelPerformance {
+        background-color: #4f1724;
+    width: 427px;
+    height: 431px;
+    border-radius: 35px;
+    padding: var(--space-5);
+    transition: all ease 0.5s;
+    margin-bottom: var(--space-6);
+}
+.ChannelPerformance:hover {
+     transform: translatey(-2%);
+     box-shadow:
+    0 0 0 1px rgba(255, 120, 150, 0.15),
+    0 0 20px rgba(180, 40, 80, 0.25),
+    0 0 40px rgba(180, 40, 80, 0.2),
+    0 0 80px rgba(180, 40, 80, 0.1);
+}
+ .Dashboard .Channelrow {
+    display: flex;
+    gap: 40px;
+ }
+ .Dashboard .Channelrow .TopProducts {
+    background-color: #4f1724;
+     width: 414px;
+    height: 430px;
+    border-radius: 35px;
+    padding: var(--space-5);
+    transition: all ease 0.5s;
+    margin-bottom: var(--space-6);
+
+ }
+ .Dashboard .Channelrow .TopProducts:hover {
+     transform: translatey(-2%);
+     box-shadow:
+    0 0 0 1px rgba(255, 120, 150, 0.15),
+    0 0 20px rgba(180, 40, 80, 0.25),
+    0 0 40px rgba(180, 40, 80, 0.2),
+    0 0 80px rgba(180, 40, 80, 0.1);
+ }
+ .Dashboard .Channelrow .TopProducts .Products-Heading h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 4px;
+ }
+  .Dashboard .Channelrow .TopProducts .Products-Heading h3 {
+    color: #cca1a5;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  .Dashboard .Channelrow .TopProducts ul {
+    margin-top: 20px;
+    gap: 16px;
+  }
+   .Dashboard .Channelrow .TopProducts ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: var(--space-7);
+   }
+   .Dashboard .Channelrow .TopProducts ul li .TextLeft {
+    display: grid;
+  height: 44px; 
+  width: 44px; 
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 40%; 
+  background-color:  #68202f;
+  color: white;
+}
+.Dashboard .Channelrow .TopProducts ul li .Title {
+    flex:1;
+    line-height: 1rem;
+}
+.Dashboard .Channelrow .TopProducts ul li .Title .Main-Title {
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.Dashboard .Channelrow .TopProducts ul li .Title .secondry-Title {
+    font-size:  12px;
+    color: #cca1a5;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.Dashboard .Channelrow .TopProducts ul li .TextRight .price {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+
+} 
+.Dashboard .Channelrow .TopProducts ul li .TextRight .growth {
+    font-size: 12px;
+    color:#5cddab;
+    font-weight: 500;
+}
+@media (max-width: 1024px) {
+    .Dashboard .Cards-Container .card h1 {
+        font-size: 25px;
+    }
+     .main-content,
+  .Dashboard {
+    display: grid;
+    grid-column: 1 / -1; /* من أول عمود لآخر عمود = المساحة كلها */
+  }
+  .Dashboard .Dashboard-container {
+   padding-right: 60px;
+        grid-column: span 7;
+        padding-left: 60px;
+  }
+  /* الكروت: 2×2 grid */
+  .Dashboard .Cards-Container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .Dashboard .Cards-Container .card {
+    width: 100%;
+    height: auto;
+    min-height: 160px;
+  }
+
+  /* شارت الرفينيو: full width */
+  .RevnueProfitChart {
+    width: 100%;
+    height: 430px;
+    margin-bottom: 0;
+  }
+  .RevnueProfitChart .main-Heading {
+    flex-wrap: wrap;
+    row-gap: 12px;
+    padding-right: 20px;
+  }
+  .RevnueProfitChart .main-Heading .RevnueLegnd {
+    padding-right: 0;
+  }
+
+  /* كل الصفوف تبقى عمودية (column) مش أفقية */
+  .Dashboard .Charts-Row,
+  .Dashboard .ordersrow,
+  .Dashboard .Channelrow {
+    flex-direction: column;
+    gap: 24px;
+  }
+   .Dashboard .Charts-Row .CategoryChart {
+    margin-top: 0;
+    margin-bottom: 25px;
+   }
+   .Dashboard .Charts-Row .CategoryChart .Catgory-Legend {
+    top: 20px;
+   }
+   .Dashboard .ordersrow .OrdersTable {
+    margin-bottom: 0;
+   }
+  /* كل عنصر جوه الصفوف دي ياخد العرض كامل */
+  .Dashboard .Charts-Row .CategoryChart,
+  .Dashboard .ordersrow .OrdersTable,
+  .activity-feed,
+  .ChannelPerformance,
+  .Dashboard .Channelrow .TopProducts {
+    width: 100%;
+    height: auto;
+    
+  }
+  .Dashboard .Channelrow .TopProducts {
+    margin-bottom: 0;
+  }
+  .ChannelPerformance {
+    margin-bottom: 0;
+  }
+  .activity-feed {
+    margin-bottom: 25px;
+  }
+
+  /* الـ svg بتاع الـ CategoryChart يترجع لمكانه الصح مع العرض الجديد */
+  .Dashboard .Charts-Row .CategoryChart svg {
+    left: 128%;
+        transform: translateX(-50%);
+        width: 350px !important;
+        height: 350px !important;
+  }
+
+  /* الجدول - overflow scroll لو المحتوى أكبر من المساحة */
+  .Dashboard .ordersrow .OrdersTable .tablecont {
+    overflow-x: auto;
+  }
+  .Dashboard .ordersrow .OrdersTable .tablecont table {
+    width: 100%;
+    min-width: 500px;
+  }
+}
+
+/* موبايل الحقيقي */
+@media (max-width: 640px) {
+  .Dashboard .Cards-Container {
+    grid-template-columns: 1fr;
+  }
+}
